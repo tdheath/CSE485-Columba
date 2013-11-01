@@ -6,7 +6,7 @@
     mc:Ignorable="d"
     d:DesignHeight="300" d:DesignWidth="400">
 
-    <Grid x:Name="LayoutRoot" Background="White" ShowGridLines="True">
+    <Grid x:Name="LayoutRoot" Background="White" ShowGridLines="False">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="95*"/>
             <ColumnDefinition Width="211*"/>
@@ -19,9 +19,13 @@
             <RowDefinition Height="56*"/>
             <RowDefinition Height="56*"/>
         </Grid.RowDefinitions>
-        <Canvas x:Name="robotCanvas" Margin="10" Background="WhiteSmoke"/>
-        <Canvas x:Name="generalBlockCanvas" Margin="10" Grid.Row="1" Background="WhiteSmoke">
-            <Canvas 
+       <!-- <Border HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="5,5,5,5"  >
+            <Canvas x:Name="robotCanvas" Margin="10" Background="WhiteSmoke"/>
+        </Border>
+        <Border HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="5,5,5,5" 
+            Grid.Row="1"  >
+            <Canvas x:Name="generalBlockCanvas" Margin="10" Grid.Row="1" Background="WhiteSmoke">
+                <Canvas 
                 Height="34.537" 
                 Width="72" 
                 Canvas.Left="20.776" 
@@ -34,18 +38,18 @@
                 MouseLeftButtonDown="Handle_MouseDown"
                 MouseMove="Handle_MouseMove"
                 MouseLeftButtonUp="Handle_MouseUp"
-                ZIndex="10000">
-                <Rectangle Height="35.047" Width="72" RenderTransformOrigin="0.5,0.5" Fill="#FF95A1D6" Stroke="#FF000000" HorizontalAlignment="Center">
-                    <Rectangle.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Rectangle.RenderTransform>
-                </Rectangle>
-                <TextBlock 
+                ZIndex="9999">
+                    <Rectangle Height="35.047" Width="72" RenderTransformOrigin="0.5,0.5" Fill="#FF95A1D6" Stroke="#FF000000" HorizontalAlignment="Center">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <TextBlock 
                     Height="Auto" 
                     Width="Auto" 
                     FontWeight="Bold" 
@@ -58,13 +62,39 @@
                     FontFamily="Arial" 
                     FontSize="14.666666984558106"
                     />
+                </Canvas>
             </Canvas>
-        </Canvas>
-        <Canvas x:Name="methodCanvas" Margin="10" Grid.Row="2" Background="WhiteSmoke"/>
-        <Canvas x:Name="variableCanvas" Margin="10" Grid.Row="3" Background="WhiteSmoke"/>
-        <Canvas x:Name="implementCanvas" Grid.Column="1" Grid.RowSpan="4" Margin="10" Background="WhiteSmoke">
-            <TextBox Height="500" Width="300" Canvas.Left="2" Canvas.Top="3" Text="Drop Items Here" TextWrapping="Wrap" x:Name="txtContent"/>
-        </Canvas>
+        </Border>
+        <Border HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="5,5,5,5" 
+            Grid.Row="2"  >
+            <Canvas 
+            x:Name="methodCanvas" 
+            Margin="10" 
+            Grid.Row="2" 
+            Background="WhiteSmoke"
+            ZIndex ="0"/>
+        </Border>
+        <Border HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="5,5,5,5" 
+            Grid.Row="3"  >
+            <Canvas 
+            x:Name="variableCanvas" 
+            Margin="10" 
+            Grid.Row="3" 
+            Background="WhiteSmoke"
+            ZIndex ="0"/>
+        </Border>
+        <Border HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="5,5,5,5" Grid.Column="1" 
+            Grid.RowSpan="4"  >
+
+            <Canvas 
+            x:Name="implementCanvas" 
+            Grid.Column="1" 
+            Grid.RowSpan="4" 
+            Margin="10" 
+            Background="WhiteSmoke"
+            ZIndex ="0">
+            </Canvas>
+        </Border> -->
 
     </Grid>
 </UserControl>
