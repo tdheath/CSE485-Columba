@@ -33,3 +33,15 @@ C:\Users\David\Downloads\Desktop\CapGUI\CapGUI\obj\Debug\CapGUI.g.resources
 C:\Users\David\Downloads\Desktop\CapGUI\CapGUI\obj\Debug\CapGUI.dll
 C:\Users\David\Downloads\Desktop\CapGUI\CapGUI\obj\Debug\CapGUI.pdb
 C:\Users\David\Downloads\Desktop\CapGUI\CapGUI\obj\Debug\XapCacheFile.xml
+C:\Users\David\Downloads\Desktop\Desktop\CapGUI\CapGUI\Bin\Debug\CapGUI.dll
+C:\Users\David\Downloads\Desktop\Desktop\CapGUI\CapGUI\Bin\Debug\CapGUI.pdb
+C:\Users\David\Downloads\Desktop\Desktop\CapGUI\CapGUI\Bin\Debug\AppManifest.xaml
+C:\Users\David\Downloads\Desktop\Desktop\CapGUI\CapGUI\Bin\Debug\CapGUI.xap
+C:\Users\David\Downloads\Desktop\Desktop\CapGUI\CapGUI\Bin\Debug\CapGUITestPage.html
+C:\Users\David\Downloads\Desktop\Desktop\CapGUI\CapGUI\obj\Debug\CapGUI.csprojResolveAssemblyReference.cache
+C:\Users\David\Downloads\Desktop\Desktop\CapGUI\CapGUI\obj\Debug\App.g.cs
+C:\Users\David\Downloads\Desktop\Desktop\CapGUI\CapGUI\obj\Debug\MainPage.g.cs
+C:\Users\David\Downloads\Desktop\Desktop\CapGUI\CapGUI\obj\Debug\CapGUI.g.resources
+C:\Users\David\Downloads\Desktop\Desktop\CapGUI\CapGUI\obj\Debug\CapGUI.dll
+C:\Users\David\Downloads\Desktop\Desktop\CapGUI\CapGUI\obj\Debug\CapGUI.pdb
+C:\Users\David\Downloads\Desktop\Desktop\CapGUI\CapGUI\obj\Debug\XapCacheFile.xml

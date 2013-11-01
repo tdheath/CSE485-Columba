@@ -11,6 +11,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using System.Text;
 using System.Reflection;
+using System.Diagnostics;
 
 namespace CapGUI
 {
@@ -21,6 +22,7 @@ namespace CapGUI
         private ListBox blockPalette;
         private ListBox methodPalette;
         private ListBox variablePalette;
+        private Canvas testingCanvas;
         //Point StartingDragPoint;
         //Panel blocksPanel;
 
@@ -35,7 +37,6 @@ namespace CapGUI
         {
             InitializeComponent();
             //Canvas x = replaceBlock(10,10);
-
             editorPanel = testListBox();
             blockPalette = testListBox();
             methodPalette = testListBox();
@@ -46,11 +47,16 @@ namespace CapGUI
             LayoutRoot.Children.Add(blockPalette);
             LayoutRoot.Children.Add(methodPalette);
             LayoutRoot.Children.Add(variablePalette);
-            
+            testingCanvas = replaceBlock(63, 261, "prints here");
+            LayoutRoot.Children.Add(testingCanvas);
+            //Grid.SetRow(testingCanvas, 1);
+            //Grid.SetColumn(testingCanvas, 0);
             //FrameworkElement frameworkElement = (FrameworkElement)thisOne2;
 
             //Need to use PreviewMouseDownHandler to access the items in the listbox to drag and drop
-            this.blockPalette.MouseLeftButtonDown += new MouseButtonEventHandler(Handle_MouseDown);
+            //this.blockPalette.MouseLeftButtonDown += new MouseButtonEventHandler(Handle_MouseDown);
+            blockPalette.AddHandler(MouseLeftButtonDownEvent, new MouseButtonEventHandler(Handle_MouseDown), true);
+            
             //Grid.SetRow(x, 0);
             //Grid.SetColumn(x, 0);
             Grid.SetRowSpan(editorPanel, 4);
@@ -67,13 +73,22 @@ namespace CapGUI
         public void Handle_MouseDown(object sender, MouseEventArgs args)
         {
             ListBox item = sender as ListBox;
-            //int index = item.IndexFromPoint(args.Location);
-            mouseVerticalPosition = args.GetPosition(null).Y;
-            mouseHorizontalPosition = args.GetPosition(null).X;
-            replaceBlock(mouseVerticalPosition, mouseHorizontalPosition);
+            //int index = item.SelectedIndex;
+            String indexString = item.SelectedItem.ToString();
+            //testingCanvas = replaceBlock(10, 10, indexString);
+            //LayoutRoot.Children.Add(testingCanvas);
+            //Grid.SetRow(testingCanvas, 0);
+            //Grid.SetColumn(testingCanvas, 0);
+            Point position = args.GetPosition(this);
+            double mouseVerticalPosition = position.Y;
+            double mouseHorizontalPosition = position.X;
+            Debug.WriteLine(mouseHorizontalPosition);
+            Debug.WriteLine(mouseVerticalPosition);
+            testingCanvas = replaceBlock(mouseHorizontalPosition, mouseVerticalPosition, indexString);
+            LayoutRoot.Children.Add(testingCanvas);
+            testingCanvas.MouseMove += new MouseEventHandler(Handle_MouseMove);
             isMouseCaptured = true;
             item.CaptureMouse();
-            Console.Write("MouseDown");
         }
 
         public void Handle_MouseMove(object sender, MouseEventArgs args)
@@ -106,10 +121,10 @@ namespace CapGUI
             mouseVerticalPosition = -1;
             mouseHorizontalPosition = -1;
             FrameworkElement objFrameworkElement = (FrameworkElement)sender;
-            Canvas x = replaceBlock(10, 10);
-            LayoutRoot.Children.Add(x);
+            //Canvas x = replaceBlock(10, 10);
+            //LayoutRoot.Children.Add(x);
 
-            LayoutRoot.Children.Remove((FrameworkElement)sender);
+            //LayoutRoot.Children.Remove((FrameworkElement)sender);
 
 
              /*FrameworkElement objFrameworkElement = (FrameworkElement)sender;
@@ -245,15 +260,21 @@ namespace CapGUI
         }
         #endregion
 
-        private Canvas replaceBlock(double x, double y)
+        private Canvas replaceBlock(double x, double y, String data)
         {
             Canvas newCanvas = new Canvas();
-            newCanvas.Width = 35;
-            newCanvas.Height = 72;
-
-            newCanvas.SetValue(Canvas.LeftProperty, x);
-            newCanvas.SetValue(Canvas.TopProperty, y);
-            newCanvas.SetValue(Canvas.BackgroundProperty, new SolidColorBrush(Colors.Black));
+            newCanvas.Width = 72;
+            newCanvas.Height = 35;
+            TextBlock text = new TextBlock();
+            text.Text = data;
+            Canvas.SetLeft(newCanvas, x);
+            Canvas.SetTop(newCanvas, y);
+            //newCanvas.SetValue(Canvas.LeftProperty, x);
+            //newCanvas.SetValue(Canvas.TopProperty, y);
+            Debug.WriteLine("canvas x:" + x);
+            Debug.WriteLine("canvas y:" + y);
+            newCanvas.SetValue(Canvas.BackgroundProperty, new SolidColorBrush(Colors.Red));
+            newCanvas.Children.Add(text);
             return newCanvas;
         }
 
@@ -262,6 +283,7 @@ namespace CapGUI
             ListBox newListBox = new ListBox();
             List<String> newList = new List<string>();
             newList.Add("Test");
+            newList.Add("This");
             /*for (int i = 0; i < 100; i++)
             {
                 newList.Add("butts");
