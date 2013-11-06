@@ -3,10 +3,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolKit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Toolkit"
     mc:Ignorable="d"
     d:DesignHeight="300" d:DesignWidth="400">
-    
-    <Grid x:Name="LayoutRoot" Background="White" ShowGridLines="False">
+
+    <Grid x:Name="LayoutRoot" Background="White" ShowGridLines="False" MinHeight="800" MinWidth="900">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="95*"/>
             <ColumnDefinition Width="211*"/>
@@ -15,86 +16,77 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="56*"/>
             <RowDefinition Height="56*"/>
-
             <RowDefinition Height="56*"/>
             <RowDefinition Height="56*"/>
         </Grid.RowDefinitions>
-       <!-- <Border HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="5,5,5,5"  >
-            <Canvas x:Name="robotCanvas" Margin="10" Background="WhiteSmoke"/>
+        <Border HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="5,5,5,5" Grid.Row="0">
+            <Viewbox>
+                <StackPanel Orientation="Horizontal" Margin="0" Grid.Row="0">
+                    <toolKit:ListBoxDragDropTarget x:Name="dragDrop" AllowDrop="False" >
+                    </toolKit:ListBoxDragDropTarget>
+                </StackPanel>
+            </Viewbox>
+        </Border>
+        <Border HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="5,5,5,5" Grid.Row="3" Grid.Column="2">
+            <Viewbox>
+                <StackPanel x:Name="trashPanel" Orientation="Horizontal" Margin="0" Grid.Row="3" Grid.Column="2">
+                </StackPanel>
+            </Viewbox>
+        </Border>
+        <Border HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="5,5,5,5" Grid.Row="1">
+            <StackPanel Orientation="Horizontal" Margin="0" Grid.Row="1">
+                <Viewbox>
+                    <toolKit:ListBoxDragDropTarget AllowDrop="False">
+                        <ListBox x:Name="blockPalette" Height="200" Width="380">
+                            <ListBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Vertical"/>
+                                </ItemsPanelTemplate>
+                            </ListBox.ItemsPanel>
+                        </ListBox>
+                    </toolKit:ListBoxDragDropTarget>
+                </Viewbox>
+            </StackPanel>
+        </Border>
+        <Border HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="5,5,5,5" Grid.Row="2">
+            <StackPanel Orientation="Horizontal" Margin="0" Grid.Row="2">
+                <toolKit:ListBoxDragDropTarget AllowDrop="False">
+                    <ListBox x:Name="methodPalette" Height="200" Width="370" >
+                        <ListBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Vertical"/>
+                            </ItemsPanelTemplate>
+                        </ListBox.ItemsPanel>
+                    </ListBox>
+                </toolKit:ListBoxDragDropTarget>
+            </StackPanel>
+        </Border>
+        <Border HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="5,5,5,5" Grid.Row="3">
+            <StackPanel Orientation="Horizontal" Margin="0" Grid.Row="3">
+                <toolKit:ListBoxDragDropTarget AllowDrop="False">
+                    <ListBox x:Name="variablePalette" Height="200" Width="370" >
+                        <ListBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Vertical"/>
+                            </ItemsPanelTemplate>
+                        </ListBox.ItemsPanel>
+                    </ListBox>
+                </toolKit:ListBoxDragDropTarget>
+            </StackPanel>
         </Border>
         <Border HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="5,5,5,5" 
-            Grid.Row="1"  >
-            <Canvas x:Name="generalBlockCanvas" Margin="10" Grid.Row="1" Background="WhiteSmoke">
-                <Canvas 
-                Height="34.537" 
-                Width="72" 
-                Canvas.Left="20.776" 
-                Canvas.Top="28.939" 
-                x:Name="DragElement1" 
-                HorizontalAlignment="Center" 
-                RenderTransformOrigin="0.504999995231628,0.485000014305115" 
-                Cursor="Hand" 
-                Tag="[draggable]" 
-                MouseLeftButtonDown="Handle_MouseDown"
-                MouseMove="Handle_MouseMove"
-                MouseLeftButtonUp="Handle_MouseUp"
-                ZIndex="9999">
-                    <Rectangle Height="35.047" Width="72" RenderTransformOrigin="0.5,0.5" Fill="#FF95A1D6" Stroke="#FF000000" HorizontalAlignment="Center">
-                        <Rectangle.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform/>
-                                <RotateTransform/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </Rectangle.RenderTransform>
-                    </Rectangle>
-                    <TextBlock 
-                    Height="Auto" 
-                    Width="Auto" 
-                    FontWeight="Bold" 
-                    Text="Drag Test" 
-                    TextWrapping="Wrap" 
-                    HorizontalAlignment="Left" 
-                    Canvas.Left="6.721" 
-                    Canvas.Top="9.253" 
-                    VerticalAlignment="Top" 
-                    FontFamily="Arial" 
-                    FontSize="14.666666984558106"
-                    />
-                </Canvas>
-            </Canvas>
+                Grid.Row="0" Grid.Column="1" Grid.RowSpan="4">
+            <StackPanel x:Name="editorPanel"  Orientation="Horizontal" Margin="0" Grid.Row="0" Grid.Column="1" Grid.RowSpan="4">
+                <toolKit:ListBoxDragDropTarget x:Name="editorDragDrop" AllowDrop="True">
+                    <ListBox x:Name="editorPalette" Height="830" Width="830">
+                        <ListBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Vertical"/>
+                            </ItemsPanelTemplate>
+                        </ListBox.ItemsPanel>
+                    </ListBox>
+                </toolKit:ListBoxDragDropTarget>
+            </StackPanel>
         </Border>
-        <Border HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="5,5,5,5" 
-            Grid.Row="2"  >
-            <Canvas 
-            x:Name="methodCanvas" 
-            Margin="10" 
-            Grid.Row="2" 
-            Background="WhiteSmoke"
-            ZIndex ="0"/>
-        </Border>
-        <Border HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="5,5,5,5" 
-            Grid.Row="3"  >
-            <Canvas 
-            x:Name="variableCanvas" 
-            Margin="10" 
-            Grid.Row="3" 
-            Background="WhiteSmoke"
-            ZIndex ="0"/>
-        </Border>
-        <Border HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="5,5,5,5" Grid.Column="1" 
-            Grid.RowSpan="4"  >
-
-            <Canvas 
-            x:Name="implementCanvas" 
-            Grid.Column="1" 
-            Grid.RowSpan="4" 
-            Margin="10" 
-            Background="WhiteSmoke"
-            ZIndex ="0">
-            </Canvas>
-        </Border> -->
-
     </Grid>
 </UserControl>

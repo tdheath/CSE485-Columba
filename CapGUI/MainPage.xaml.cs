@@ -12,17 +12,27 @@ using System.Windows.Shapes;
 using System.Text;
 using System.Reflection;
 using System.Diagnostics;
+using System.Windows.Controls.Internals;
+//using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace CapGUI
 {
     public partial class MainPage : UserControl
     {
         private List<Panel> colPanels = new List<Panel>();
-        private ListBox editorPanel;
-        private ListBox blockPalette;
-        private ListBox methodPalette;
-        private ListBox variablePalette;
-        private Canvas testingCanvas;
+        //private ListBox editorPalette;
+        //private ListBox blockPalette;
+        //private ListBox methodPalette;
+        //private ListBox variablePalette;
+        private ListBox trash;
+        //private String passInfo; //used for testing the passing
+        private List<String> newList;
+        private List<TestingBlock> DragDropList;
+        private TrashDragDropTarget trashDragDrop;
+        //private EditorDragDropTarget editorDragDrop;
+        private ObservableCollection<TestingBlock> editorList; 
+        
         //Point StartingDragPoint;
         //Panel blocksPanel;
 
@@ -36,29 +46,68 @@ namespace CapGUI
         public MainPage()
         {
             InitializeComponent();
-            //Canvas x = replaceBlock(10,10);
-            editorPanel = testListBox();
+
+            trashDragDrop = new TrashDragDropTarget();
+            //editorDragDrop = new EditorDragDropTarget();
+            trash = new ListBox();
+            //editorPalette = new ListBox();
+            ListBox testingBox = new ListBox();
+
+            editorList = new ObservableCollection<TestingBlock>();
+            DragDropList = new List<TestingBlock>();
+            DragDropList.Add( new TestingBlock("Woof"));
+            DragDropList.Add( new TestingBlock("Meow"));
+            DragDropList.Add( new TestingBlock("Tweet"));
+            DragDropList.Add( new TestingBlock("Squeak"));
+            DragDropList.Add( new TestingBlock("Moo"));
+            DragDropList.Add( new TestingBlock("Croak"));
+            DragDropList.Add( new TestingBlock("Toot"));
+            DragDropList.Add( new TestingBlock("Quack"));
+            DragDropList.Add( new TestingBlock("Blub"));
+            DragDropList.Add( new TestingBlock("Ow Ow Ow"));
+            blockPalette.ItemsSource = DragDropList;
+            
+            
+            testingBox.ItemsSource = DragDropList;
+            testingBox.Background = new SolidColorBrush(Colors.Orange);
+            dragDrop.Content = testingBox;
+
+            //Adding to trash stack panel in the layoutroot in the xaml
+            trash.Height = 200;
+            trash.Width = 380;
+            trashDragDrop.Content = trash;
+            trashDragDrop.AllowDrop = true;
+            trashDragDrop.AllowAdd = false;
+            //trashDragDrop.Opacity = 0;
+            trashPanel.Children.Add(trashDragDrop);
+
+            //editorPalette.Height = 830;
+            //editorPalette.Width = 830;
+            //editorPalette.ItemsSource = editorList;
+            //editorDragDrop.Content = editorPalette;
+            //editorDragDrop.AllowDrop = true;
+            //editorPanel.Children.Add(editorDragDrop);
+            editorPalette.AddHandler(MouseLeftButtonDownEvent, new MouseButtonEventHandler(Handle_EditorMouseDown), true);
+            //editorPalette.AddHandler(MouseLeftButtonUpEvent, new MouseButtonEventHandler(Handle_EditorMouseUp), true);
+
+            blockPalette.AddHandler(MouseLeftButtonDownEvent, new MouseButtonEventHandler(Handle_OtherMouseDown), true);
+            methodPalette.AddHandler(MouseLeftButtonDownEvent, new MouseButtonEventHandler(Handle_OtherMouseDown), true);
+            variablePalette.AddHandler(MouseLeftButtonDownEvent, new MouseButtonEventHandler(Handle_OtherMouseDown), true);
+            dragDrop.AddHandler(MouseLeftButtonDownEvent, new MouseButtonEventHandler(Handle_OtherMouseDown), true);
+            
+            /*editorPanel = testListBox();
             blockPalette = testListBox();
             methodPalette = testListBox();
             variablePalette = testListBox();
-
-            //LayoutRoot.Children.Add(x);
+            
+            
             LayoutRoot.Children.Add(editorPanel);
             LayoutRoot.Children.Add(blockPalette);
             LayoutRoot.Children.Add(methodPalette);
             LayoutRoot.Children.Add(variablePalette);
-            testingCanvas = replaceBlock(63, 261, "prints here");
-            LayoutRoot.Children.Add(testingCanvas);
-            //Grid.SetRow(testingCanvas, 1);
-            //Grid.SetColumn(testingCanvas, 0);
-            //FrameworkElement frameworkElement = (FrameworkElement)thisOne2;
 
-            //Need to use PreviewMouseDownHandler to access the items in the listbox to drag and drop
-            //this.blockPalette.MouseLeftButtonDown += new MouseButtonEventHandler(Handle_MouseDown);
             blockPalette.AddHandler(MouseLeftButtonDownEvent, new MouseButtonEventHandler(Handle_MouseDown), true);
             
-            //Grid.SetRow(x, 0);
-            //Grid.SetColumn(x, 0);
             Grid.SetRowSpan(editorPanel, 4);
             Grid.SetRow(editorPanel, 0);
             Grid.SetColumn(editorPanel, 1);
@@ -67,28 +116,44 @@ namespace CapGUI
             Grid.SetRow(methodPalette, 2);
             Grid.SetColumn(methodPalette, 0);
             Grid.SetRow(variablePalette, 3);
-            Grid.SetColumn(variablePalette, 0);
+            Grid.SetColumn(variablePalette, 0);*/
         }
 
-        public void Handle_MouseDown(object sender, MouseEventArgs args)
+        private void Bind(ListBox listbox, List<TestingBlock> list)
         {
-            ListBox item = sender as ListBox;
-            //int index = item.SelectedIndex;
-            String indexString = item.SelectedItem.ToString();
-            //testingCanvas = replaceBlock(10, 10, indexString);
-            //LayoutRoot.Children.Add(testingCanvas);
-            //Grid.SetRow(testingCanvas, 0);
-            //Grid.SetColumn(testingCanvas, 0);
-            Point position = args.GetPosition(this);
-            double mouseVerticalPosition = position.Y;
-            double mouseHorizontalPosition = position.X;
-            Debug.WriteLine(mouseHorizontalPosition);
-            Debug.WriteLine(mouseVerticalPosition);
-            testingCanvas = replaceBlock(mouseHorizontalPosition, mouseVerticalPosition, indexString);
-            LayoutRoot.Children.Add(testingCanvas);
-            testingCanvas.MouseMove += new MouseEventHandler(Handle_MouseMove);
+            listbox.ItemsSource = null;
+            listbox.ItemsSource = list;
+        }
+
+        public void Handle_OtherMouseDown(object sender, MouseEventArgs args)
+        {
+            Debug.WriteLine("fire");
+            trashDragDrop.AllowAdd = false;
+        }
+
+        public void Handle_EditorMouseDown(object sender, MouseEventArgs args)
+        {
+            ListBox listBox = sender as ListBox;
+            if (listBox.SelectedItem != null)
+            {
+                trashDragDrop.AllowAdd = true;
+                ((TestingBlock)listBox.SelectedItem).Index = listBox.SelectedIndex;
+            }
             isMouseCaptured = true;
-            item.CaptureMouse();
+            listBox.CaptureMouse();
+        }
+
+        public void Handle_EditorMouseUp(object sender, MouseEventArgs args)
+        {
+            //ListBox listBox = sender as ListBox;
+            for (int i = 0; i < this.editorPalette.Items.Count; i++)
+            {
+                ((TestingBlock)this.editorPalette.Items[i]).Index = (i);
+            }
+            
+            //Bind(this.editorPalette, DragDropList);
+            //isMouseCaptured = false;
+            //listBox.ReleaseMouseCapture();
         }
 
         public void Handle_MouseMove(object sender, MouseEventArgs args)
@@ -115,12 +180,18 @@ namespace CapGUI
 
         public void Handle_MouseUp(object sender, MouseEventArgs e)
         {
-            Canvas item = sender as Canvas;
+            ListBox item = sender as ListBox;
+            //Debug.WriteLine("string passed: " + passInfo);
+            //if (passInfo != null)
+            //{
+            //    editorPanel.Items.Add(passInfo);
+            //}
+            //String indexString = item.SelectedItem.ToString();
             isMouseCaptured = false;
             item.ReleaseMouseCapture();
             mouseVerticalPosition = -1;
             mouseHorizontalPosition = -1;
-            FrameworkElement objFrameworkElement = (FrameworkElement)sender;
+            //FrameworkElement objFrameworkElement = (FrameworkElement)sender;
             //Canvas x = replaceBlock(10, 10);
             //LayoutRoot.Children.Add(x);
 
@@ -281,7 +352,7 @@ namespace CapGUI
         private ListBox testListBox()
         {
             ListBox newListBox = new ListBox();
-            List<String> newList = new List<string>();
+            newList = new List<string>();
             newList.Add("Test");
             newList.Add("This");
             /*for (int i = 0; i < 100; i++)
@@ -289,9 +360,6 @@ namespace CapGUI
                 newList.Add("butts");
                 newList.Add("hello");
             }*/
-            //newListBox.MouseLeftButtonDown(Handle_MouseDown);//="Handle_MouseDown"
-            //    MouseMove="Handle_MouseMove"
-             //   MouseLeftButtonUp="Handle_MouseUp"
             newListBox.ItemsSource = newList;
             return newListBox;
         }
