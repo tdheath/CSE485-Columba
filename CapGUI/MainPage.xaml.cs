@@ -143,6 +143,19 @@ namespace CapGUI
             listBox.CaptureMouse();
         }
 
+        private void Handle_ButtonOnClick(object sender, EventArgs args)
+        {
+            if (trash.Items.Count != 0)
+            {
+                TestingBlock tempBlock = trash.Items[0] as TestingBlock;
+                this.tblText.Text = "There is an item! " + tempBlock.ToString();
+                trash.Items.Remove(trash.Items[0]);
+                editorPalette.Items.Insert(tempBlock.Index, tempBlock);
+            }
+            else
+                this.tblText.Text = "There are no items!";
+        }
+
         public void Handle_EditorMouseUp(object sender, MouseEventArgs args)
         {
             //ListBox listBox = sender as ListBox;

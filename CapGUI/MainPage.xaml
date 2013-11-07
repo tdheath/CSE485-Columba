@@ -19,6 +19,12 @@
             <RowDefinition Height="56*"/>
             <RowDefinition Height="56*"/>
         </Grid.RowDefinitions>
+        <Border HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="5,5,5,5" Grid.Row="0" Grid.Column="2">
+            <Canvas Grid.Row="0" Grid.Column="2" Background="MistyRose">
+                <TextBlock x:Name="tblText" Canvas.Top="20" Canvas.Left="30" Text="Not clicked yet."></TextBlock>
+                <Button x:Name="btnTest" Canvas.Top="60" Canvas.Left="30" Click="Handle_ButtonOnClick" Content="Undo!"></Button>
+            </Canvas>
+        </Border>
         <Border HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="5,5,5,5" Grid.Row="0">
             <Viewbox>
                 <StackPanel Orientation="Horizontal" Margin="0" Grid.Row="0">
