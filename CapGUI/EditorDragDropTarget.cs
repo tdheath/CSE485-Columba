@@ -44,22 +44,22 @@ namespace CapGUI
                 {
                     foreach (Selection selection in selectionCollection)
                     {
-                        if (selection.Item.GetType().Equals(typeof(TestingBlock)))
+                        if (selection.Item.GetType().Equals(typeof(Block)))
                         {
-                            ((TestingBlock)selection.Item).Index = (int)index;
+                            ((Block)selection.Item).index = (int)index;
                         }
                     }
                 }
             }
             
             base.OnDropOverride(args);
-            var dropTargetList = dropTarget.Items.Cast<TestingBlock>().ToList();
+            var dropTargetList = dropTarget.Items.Cast<Block>().ToList();
             int i = 0;
-            foreach (TestingBlock block in dropTargetList)
+            foreach (Block block in dropTargetList)
             {
-                Debug.WriteLine("Name: " + block.Name);
-                block.Index = i++;
-                Debug.WriteLine("Index: " + block.Index);
+                Debug.WriteLine("Name: " + block.blockName);
+                block.index = i++;
+                Debug.WriteLine("Index: " + block.index);
             }
             //dropTarget.ItemsSource = null;
             //dropTarget.ItemsSource = dropTargetList;

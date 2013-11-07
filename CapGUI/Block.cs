@@ -37,6 +37,8 @@ namespace CapGUI
 
             typeFieldList = new List<String>();
             dataList = new List<Object>();
+
+            index = -1;
         }
 
         /// <summary>
@@ -71,6 +73,11 @@ namespace CapGUI
         public void setData(int index, object newData)
         {
             dataList[index] = newData;
+        }
+
+        public override string ToString()
+        {
+            return blockName + "  Index: " + index;
         }
 
     }

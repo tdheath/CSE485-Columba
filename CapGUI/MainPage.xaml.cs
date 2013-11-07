@@ -28,10 +28,10 @@ namespace CapGUI
         private ListBox trash;
         //private String passInfo; //used for testing the passing
         private List<String> newList;
-        private List<TestingBlock> DragDropList;
+        private List<Block> DragDropList;
         private TrashDragDropTarget trashDragDrop;
         //private EditorDragDropTarget editorDragDrop;
-        private ObservableCollection<TestingBlock> editorList; 
+        private ObservableCollection<Block> editorList; 
         
         //Point StartingDragPoint;
         //Panel blocksPanel;
@@ -53,18 +53,18 @@ namespace CapGUI
             //editorPalette = new ListBox();
             ListBox testingBox = new ListBox();
 
-            editorList = new ObservableCollection<TestingBlock>();
-            DragDropList = new List<TestingBlock>();
-            DragDropList.Add( new TestingBlock("Woof"));
-            DragDropList.Add( new TestingBlock("Meow"));
-            DragDropList.Add( new TestingBlock("Tweet"));
-            DragDropList.Add( new TestingBlock("Squeak"));
-            DragDropList.Add( new TestingBlock("Moo"));
-            DragDropList.Add( new TestingBlock("Croak"));
-            DragDropList.Add( new TestingBlock("Toot"));
-            DragDropList.Add( new TestingBlock("Quack"));
-            DragDropList.Add( new TestingBlock("Blub"));
-            DragDropList.Add( new TestingBlock("Ow Ow Ow"));
+            editorList = new ObservableCollection<Block>();
+            DragDropList = new List<Block>();
+            DragDropList.Add(new Block("Woof", Colors.Cyan));
+            DragDropList.Add(new Block("Meow", Colors.Cyan));
+            DragDropList.Add(new Block("Tweet", Colors.Cyan));
+            DragDropList.Add(new Block("Squeak", Colors.Cyan));
+            DragDropList.Add(new Block("Moo", Colors.Cyan));
+            DragDropList.Add(new Block("Croak", Colors.Cyan));
+            DragDropList.Add(new Block("Toot", Colors.Cyan));
+            DragDropList.Add(new Block("Quack", Colors.Cyan));
+            DragDropList.Add(new Block("Blub", Colors.Cyan));
+            DragDropList.Add(new Block("Ow Ow Ow", Colors.Cyan));
             blockPalette.ItemsSource = DragDropList;
             
             
@@ -119,7 +119,7 @@ namespace CapGUI
             Grid.SetColumn(variablePalette, 0);*/
         }
 
-        private void Bind(ListBox listbox, List<TestingBlock> list)
+        private void Bind(ListBox listbox, List<Block> list)
         {
             listbox.ItemsSource = null;
             listbox.ItemsSource = list;
@@ -137,7 +137,7 @@ namespace CapGUI
             if (listBox.SelectedItem != null)
             {
                 trashDragDrop.AllowAdd = true;
-                ((TestingBlock)listBox.SelectedItem).Index = listBox.SelectedIndex;
+                ((Block)listBox.SelectedItem).index = listBox.SelectedIndex;
             }
             isMouseCaptured = true;
             listBox.CaptureMouse();
@@ -147,10 +147,10 @@ namespace CapGUI
         {
             if (trash.Items.Count != 0)
             {
-                TestingBlock tempBlock = trash.Items[0] as TestingBlock;
+                Block tempBlock = trash.Items[0] as Block;
                 this.tblText.Text = "There is an item! " + tempBlock.ToString();
                 trash.Items.Remove(trash.Items[0]);
-                editorPalette.Items.Insert(tempBlock.Index, tempBlock);
+                editorPalette.Items.Insert(tempBlock.index, tempBlock);
             }
             else
                 this.tblText.Text = "There are no items!";
@@ -161,7 +161,7 @@ namespace CapGUI
             //ListBox listBox = sender as ListBox;
             for (int i = 0; i < this.editorPalette.Items.Count; i++)
             {
-                ((TestingBlock)this.editorPalette.Items[i]).Index = (i);
+                ((Block)this.editorPalette.Items[i]).index = (i);
             }
             
             //Bind(this.editorPalette, DragDropList);
