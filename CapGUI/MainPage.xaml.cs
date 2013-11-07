@@ -95,28 +95,6 @@ namespace CapGUI
             variablePalette.AddHandler(MouseLeftButtonDownEvent, new MouseButtonEventHandler(Handle_OtherMouseDown), true);
             dragDrop.AddHandler(MouseLeftButtonDownEvent, new MouseButtonEventHandler(Handle_OtherMouseDown), true);
             
-            /*editorPanel = testListBox();
-            blockPalette = testListBox();
-            methodPalette = testListBox();
-            variablePalette = testListBox();
-            
-            
-            LayoutRoot.Children.Add(editorPanel);
-            LayoutRoot.Children.Add(blockPalette);
-            LayoutRoot.Children.Add(methodPalette);
-            LayoutRoot.Children.Add(variablePalette);
-
-            blockPalette.AddHandler(MouseLeftButtonDownEvent, new MouseButtonEventHandler(Handle_MouseDown), true);
-            
-            Grid.SetRowSpan(editorPanel, 4);
-            Grid.SetRow(editorPanel, 0);
-            Grid.SetColumn(editorPanel, 1);
-            Grid.SetRow(blockPalette, 1);
-            Grid.SetColumn(blockPalette, 0);
-            Grid.SetRow(methodPalette, 2);
-            Grid.SetColumn(methodPalette, 0);
-            Grid.SetRow(variablePalette, 3);
-            Grid.SetColumn(variablePalette, 0);*/
         }
 
         private void Bind(ListBox listbox, List<Block> list)
