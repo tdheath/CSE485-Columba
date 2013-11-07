@@ -21,6 +21,8 @@ namespace CapGUI
         public string blockName;
         //Color the block is rendered in
         public Color blockColor;
+        //Index in the editor window
+        public int index { get; set; }
         //further metadata can go here-- package name, maybe function?, etc.
 
         //Holds the types / names of each of the fields in the block. (e.g. [String, Block, ...])

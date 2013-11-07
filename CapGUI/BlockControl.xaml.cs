@@ -67,11 +67,5 @@ namespace CapGUI
             //Any final rendering code
 
         }
-
-        private void InitializeComponent()
-        {
-            //throw new NotImplementedException();
-        }
-
     }
 }

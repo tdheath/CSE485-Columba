@@ -15,8 +15,13 @@ namespace CapGUI
     /// <summary>
     /// Reads in blocks from the API file provided (XML, etc.) and creates lists of block definitions in our system
     /// </summary>
-    public static class BlockAPIReader
+    public class BlockAPIReader
     {
+        public BlockAPIReader()
+        {
+
+        }
+
         /// <summary>
         /// Reads in blocks from an API file and returns a list of these blocks. 
         /// </summary>
