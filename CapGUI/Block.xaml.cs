@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
-using System.Windows.Ink;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
@@ -12,15 +12,15 @@ using System.Windows.Shapes;
 
 namespace CapGUI
 {
-    /// <summary>
-    /// Represents an actual block read in from the API.
-    /// </summary>
-    public class Block
+    public partial class Block : UserControl
     {
         //Actual name of the block (IF-Block, While-Block, etc.)
-        public string blockName;
+        private string blockName;
+        public string Tex { get { return blockName; } set { blockName = value; } }
         //Color the block is rendered in
-        public Color blockColor;
+        public Color blockColor { get; set; }
+        //Index in the editor window
+        public int index { get; set; }
         //further metadata can go here-- package name, maybe function?, etc.
 
         //Holds the types / names of each of the fields in the block. (e.g. [String, Block, ...])
@@ -30,11 +30,17 @@ namespace CapGUI
 
         public Block(string newBlockName, Color newBlockColor)
         {
-            blockName = newBlockName;
+            InitializeComponent();
+            Tex = newBlockName;
             blockColor = newBlockColor;
+            LayoutRoot.Background = new SolidColorBrush(newBlockColor);
+            fore.Text = Tex;
 
             typeFieldList = new List<String>();
             dataList = new List<Object>();
+
+            index = -1;
+            
         }
 
         /// <summary>
@@ -69,6 +75,11 @@ namespace CapGUI
         public void setData(int index, object newData)
         {
             dataList[index] = newData;
+        }
+
+        public override string ToString()
+        {
+            return Tex + " Index: " + index;
         }
 
     }

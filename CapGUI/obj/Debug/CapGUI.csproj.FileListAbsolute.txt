@@ -220,3 +220,358 @@ C:\Users\IAN\Documents\GitHub\CSE485-Columba\CapGUI\Bin\Debug\vi\System.Windows.
 C:\Users\IAN\Documents\GitHub\CSE485-Columba\CapGUI\Bin\Debug\zh-Hans\System.Windows.Controls.resources.dll
 C:\Users\IAN\Documents\GitHub\CSE485-Columba\CapGUI\Bin\Debug\zh-Hant\System.Windows.Controls.resources.dll
 C:\Users\IAN\Documents\GitHub\CSE485-Columba\CapGUI\obj\Debug\XapCacheFile.xml
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\CapGUI.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\CapGUI.pdb
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\AppManifest.xaml
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\CapGUI.xap
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\CapGUITestPage.html
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\System.Windows.Controls.Toolkit.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\System.Windows.Controls.Toolkit.Internals.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\System.Windows.Controls.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\System.Windows.Controls.Toolkit.pdb
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\System.Windows.Controls.Toolkit.xml
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\System.Windows.Controls.xml
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\ar\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\bg\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\ca\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\cs\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\da\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\de\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\el\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\es\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\et\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\eu\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\fi\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\fr\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\he\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\hr\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\hu\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\id\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\it\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\ja\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\ko\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\lt\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\lv\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\ms\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\nl\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\no\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\pl\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\pt\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\pt-BR\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\ro\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\ru\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\sk\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\sl\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\sr-Cyrl-CS\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\sr-Latn-CS\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\sv\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\th\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\tr\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\uk\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\vi\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\zh-Hans\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\zh-Hant\System.Windows.Controls.resources.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\obj\Debug\App.g.cs
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\obj\Debug\BlockControl.g.cs
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\obj\Debug\MainPage.g.cs
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\obj\Debug\CapGUI.g.resources
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\obj\Debug\CapGUI.dll
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\obj\Debug\CapGUI.pdb
+C:\Users\David\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\obj\Debug\XapCacheFile.xml
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\CapGUI.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\CapGUI.pdb
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\AppManifest.xaml
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\CapGUI.xap
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\CapGUITestPage.html
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\System.Windows.Controls.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\System.Windows.Controls.Toolkit.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\System.Windows.Controls.Toolkit.Internals.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\System.Windows.Controls.xml
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\System.Windows.Controls.Toolkit.pdb
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\System.Windows.Controls.Toolkit.xml
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\ar\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\bg\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\ca\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\cs\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\da\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\de\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\el\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\es\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\et\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\eu\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\fi\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\fr\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\he\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\hr\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\hu\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\id\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\it\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\ja\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\ko\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\lt\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\lv\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\ms\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\nl\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\no\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\pl\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\pt\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\pt-BR\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\ro\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\ru\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\sk\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\sl\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\sr-Cyrl-CS\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\sr-Latn-CS\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\sv\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\th\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\tr\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\uk\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\vi\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\zh-Hans\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\zh-Hant\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\obj\Debug\CapGUI.csprojResolveAssemblyReference.cache
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\obj\Debug\App.g.cs
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\obj\Debug\BlockControl.g.cs
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\obj\Debug\MainPage.g.cs
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\obj\Debug\CapGUI.g.resources
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\obj\Debug\CapGUI.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\obj\Debug\CapGUI.pdb
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CSE485-Columba-master\CapGUI\obj\Debug\XapCacheFile.xml
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\CapGUI.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\CapGUI.pdb
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\AppManifest.xaml
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\CapGUI.xap
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\CapGUITestPage.html
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\System.Windows.Controls.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\System.Windows.Controls.Toolkit.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\System.Windows.Controls.Toolkit.Internals.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\System.Windows.Controls.xml
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\System.Windows.Controls.Toolkit.pdb
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\System.Windows.Controls.Toolkit.xml
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\ar\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\bg\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\ca\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\cs\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\da\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\de\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\el\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\es\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\et\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\eu\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\fi\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\fr\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\he\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\hr\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\hu\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\id\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\it\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\ja\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\ko\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\lt\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\lv\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\ms\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\nl\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\no\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\pl\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\pt\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\pt-BR\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\ro\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\ru\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\sk\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\sl\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\sr-Cyrl-CS\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\sr-Latn-CS\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\sv\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\th\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\tr\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\uk\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\vi\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\zh-Hans\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\Bin\Debug\zh-Hant\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\obj\Debug\CapGUI.csprojResolveAssemblyReference.cache
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\obj\Debug\App.g.cs
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\obj\Debug\BlockControl.g.cs
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\obj\Debug\MainPage.g.cs
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\obj\Debug\CapGUI.g.resources
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\obj\Debug\CapGUI.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\obj\Debug\CapGUI.pdb
+C:\Users\Tracey\Desktop\CSE485-Columba-master new\CapGUI\obj\Debug\XapCacheFile.xml
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\CapGUI.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\CapGUI.pdb
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\AppManifest.xaml
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\CapGUI.xap
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\CapGUITestPage.html
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\System.Windows.Controls.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\System.Windows.Controls.Toolkit.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\System.Windows.Controls.Toolkit.Internals.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\System.Windows.Controls.xml
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\System.Windows.Controls.Toolkit.pdb
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\System.Windows.Controls.Toolkit.xml
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\ar\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\bg\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\ca\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\cs\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\da\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\de\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\el\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\es\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\et\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\eu\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\fi\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\fr\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\he\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\hr\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\hu\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\id\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\it\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\ja\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\ko\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\lt\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\lv\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\ms\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\nl\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\no\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\pl\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\pt\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\pt-BR\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\ro\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\ru\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\sk\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\sl\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\sr-Cyrl-CS\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\sr-Latn-CS\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\sv\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\th\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\tr\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\uk\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\vi\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\zh-Hans\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\Bin\Debug\zh-Hant\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\obj\Debug\CapGUI.csprojResolveAssemblyReference.cache
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\obj\Debug\App.g.cs
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\obj\Debug\BlockControl.g.cs
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\obj\Debug\MainPage.g.cs
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\obj\Debug\CapGUI.g.resources
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\obj\Debug\CapGUI.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\obj\Debug\CapGUI.pdb
+C:\Users\Tracey\Desktop\CSE485-Columba-master\CapGUI\obj\Debug\XapCacheFile.xml
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\obj\Debug\CapGUI.csprojResolveAssemblyReference.cache
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\obj\Debug\App.g.cs
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\obj\Debug\BlockControl.g.cs
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\obj\Debug\MainPage.g.cs
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\obj\Debug\CapGUI.g.resources
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\obj\Debug\CapGUI.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\obj\Debug\CapGUI.pdb
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\CapGUI.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\CapGUI.pdb
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\AppManifest.xaml
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\CapGUI.xap
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\CapGUITestPage.html
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\System.Windows.Controls.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\System.Windows.Controls.Toolkit.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\System.Windows.Controls.Toolkit.Internals.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\System.Windows.Controls.xml
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\System.Windows.Controls.Toolkit.pdb
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\System.Windows.Controls.Toolkit.xml
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\ar\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\bg\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\ca\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\cs\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\da\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\de\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\el\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\es\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\et\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\eu\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\fi\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\fr\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\he\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\hr\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\hu\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\id\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\it\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\ja\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\ko\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\lt\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\lv\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\ms\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\nl\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\no\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\pl\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\pt\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\pt-BR\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\ro\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\ru\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\sk\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\sl\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\sr-Cyrl-CS\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\sr-Latn-CS\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\sv\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\th\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\tr\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\uk\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\vi\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\zh-Hans\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\Bin\Debug\zh-Hant\System.Windows.Controls.resources.dll
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\obj\Debug\XapCacheFile.xml
+C:\Users\Tracey\Desktop\CSE485-Columba-master - Copy\CapGUI\obj\Debug\Block.g.cs
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\CapGUI.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\CapGUI.pdb
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\AppManifest.xaml
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\CapGUI.xap
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\CapGUITestPage.html
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\System.Windows.Controls.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\System.Windows.Controls.Toolkit.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\System.Windows.Controls.Toolkit.Internals.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\System.Windows.Controls.xml
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\System.Windows.Controls.Toolkit.pdb
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\System.Windows.Controls.Toolkit.xml
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\ar\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\bg\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\ca\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\cs\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\da\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\de\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\el\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\es\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\et\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\eu\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\fi\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\fr\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\he\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\hr\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\hu\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\id\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\it\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\ja\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\ko\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\lt\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\lv\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\ms\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\nl\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\no\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\pl\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\pt\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\pt-BR\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\ro\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\ru\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\sk\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\sl\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\sr-Cyrl-CS\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\sr-Latn-CS\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\sv\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\th\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\tr\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\uk\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\vi\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\zh-Hans\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\Bin\Debug\zh-Hant\System.Windows.Controls.resources.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\obj\Debug\CapGUI.csprojResolveAssemblyReference.cache
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\obj\Debug\App.g.cs
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\obj\Debug\BlockControl.g.cs
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\obj\Debug\Block.g.cs
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\obj\Debug\MainPage.g.cs
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\obj\Debug\CapGUI.g.resources
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\obj\Debug\CapGUI.dll
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\obj\Debug\CapGUI.pdb
+C:\Users\David\Downloads\CSE485-Columba-master\CSE485-Columba-master\CapGUI\obj\Debug\XapCacheFile.xml

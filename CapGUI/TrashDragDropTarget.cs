@@ -12,6 +12,7 @@ using System.Windows.Controls.Internals;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Linq;
 
 namespace CapGUI
 {
@@ -28,9 +29,7 @@ namespace CapGUI
 
         protected override void OnDropOverride(Microsoft.Windows.DragEventArgs args)
         {
-            //base.OnDropOverride(args);
-            //added
-            bool canAddItemFlag = true;
+            Debug.WriteLine("AllowAdd: " + AllowAdd);
             if (AllowAdd)
             {
                 if ((args.AllowedEffects & Microsoft.Windows.DragDropEffects.Link) == Microsoft.Windows.DragDropEffects.Link
@@ -49,16 +48,7 @@ namespace CapGUI
                     //get the target listbox from DragEventArgs
                     ListBox dropTarget = GetDropTarget(args);
 
-                    //added
-                    foreach (Selection selection in selectionCollection)
-                    {
-                        if (!CanAddItem(dropTarget, selection.Item))
-                        {
-                            canAddItemFlag = false;
-                        }
-                    }
-
-                    if (dropTarget != null && canAddItemFlag)
+                    if (dropTarget != null && selectionCollection.All(selection => CanAddItem(dropTarget, selection.Item)))
                     {
                         if ((args.Effects & Microsoft.Windows.DragDropEffects.Move) == Microsoft.Windows.DragDropEffects.Move)
                         {
@@ -70,7 +60,7 @@ namespace CapGUI
                         }
 
                         int? index = GetDropTargetInsertionIndex(dropTarget, args);
-
+                        Debug.WriteLine("?index: " + index.Value);
                         if (index != null)
                         {
                             if (args.Effects == Microsoft.Windows.DragDropEffects.Move && itemDragEventArgs != null && !itemDragEventArgs.DataRemovedFromDragSource)

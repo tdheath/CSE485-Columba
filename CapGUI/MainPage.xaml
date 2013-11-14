@@ -3,47 +3,34 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
     xmlns:toolKit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Toolkit"
+    xmlns:custom="clr-namespace:CapGUI"
     mc:Ignorable="d"
     d:DesignHeight="300" d:DesignWidth="400">
 
-    <Grid x:Name="LayoutRoot" Background="White" ShowGridLines="True" MinHeight="800" MinWidth="900">
+    <Grid x:Name="LayoutRoot" Background="White" ShowGridLines="False" MinHeight="768" MinWidth="1366">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="95*"/>
-            <ColumnDefinition Width="211*"/>
-            <ColumnDefinition Width="95*"/>
+            <ColumnDefinition Width="323*"/>
+            <ColumnDefinition Width="720*"/>
+            <ColumnDefinition Width="323*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="56*"/>
-            <RowDefinition Height="56*"/>
-            <RowDefinition Height="56*"/>
-            <RowDefinition Height="56*"/>
+            <RowDefinition Height="192*"/>
+            <RowDefinition Height="192*"/>
+            <RowDefinition Height="192*"/>
+            <RowDefinition Height="192*"/>
         </Grid.RowDefinitions>
-        <Border HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="5,5,5,5" Grid.Row="0" Grid.Column="2">
-            <Canvas Grid.Row="0" Grid.Column="2" Background="MistyRose">
-                <TextBlock x:Name="tblText" Canvas.Top="20" Canvas.Left="30" Text="Not clicked yet."></TextBlock>
-                <Button x:Name="btnTest" Canvas.Top="60" Canvas.Left="30" Click="Handle_ButtonOnClick" Content="Undo!"></Button>
-            </Canvas>
-        </Border>
+        
+        <!--Robot Panel-->
         <Border HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="5,5,5,5" Grid.Row="0">
-            <Viewbox>
-                <StackPanel Orientation="Horizontal" Margin="0" Grid.Row="0">
-                    <toolKit:ListBoxDragDropTarget x:Name="dragDrop" AllowDrop="False" >
-                    </toolKit:ListBoxDragDropTarget>
-                </StackPanel>
-            </Viewbox>
-        </Border>
-        <Border HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="5,5,5,5" Grid.Row="3" Grid.Column="2">
-            <Viewbox>
-                <StackPanel x:Name="trashPanel" Orientation="Horizontal" Margin="0" Grid.Row="3" Grid.Column="2">
-                </StackPanel>
-            </Viewbox>
-        </Border>
-        <Border HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="5,5,5,5" Grid.Row="1">
-            <StackPanel Orientation="Horizontal" Margin="0" Grid.Row="1">
-                <Viewbox>
+            <Viewbox Grid.Row="0" Stretch="UniformToFill">
+                <StackPanel Orientation="Vertical" Margin="0" VerticalAlignment="Center">
+                    <Canvas Background="LightGray" Height="40" Width="313">
+                        <TextBlock Text="ROBOT FUNCTIONS" Canvas.Left="5" Canvas.Top="10" FontSize="18" FontWeight="Bold"/>
+                    </Canvas>
                     <toolKit:ListBoxDragDropTarget AllowDrop="False">
-                        <ListBox x:Name="blockPalette" Height="200" Width="380">
+                        <ListBox x:Name="robotPalette" Height="142" Width="313" >
                             <ListBox.ItemsPanel>
                                 <ItemsPanelTemplate>
                                     <StackPanel Orientation="Vertical"/>
@@ -51,48 +38,292 @@
                             </ListBox.ItemsPanel>
                         </ListBox>
                     </toolKit:ListBoxDragDropTarget>
-                </Viewbox>
-            </StackPanel>
+                </StackPanel>
+            </Viewbox>
         </Border>
+        
+        <!--Block/Program Panel-->
+        <Border HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="5,5,5,5" Grid.Row="1">
+            <Viewbox Grid.Row="1" Stretch="UniformToFill">
+                <StackPanel Orientation="Vertical" Margin="0" VerticalAlignment="Center">
+                    <Canvas Background="LightGray" Height="40" Width="313">
+                        <TextBlock Text="PROGRAM STRUCTURES" Canvas.Left="5" Canvas.Top="10" FontSize="18" FontWeight="Bold"/>
+                    </Canvas>
+                    <toolKit:ListBoxDragDropTarget AllowDrop="False">
+                        <ListBox x:Name="blockPalette" Height="142" Width="313">
+                            <ListBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Vertical"/>
+                                </ItemsPanelTemplate>
+                            </ListBox.ItemsPanel>
+                        </ListBox>
+                    </toolKit:ListBoxDragDropTarget>
+                </StackPanel>
+            </Viewbox>
+        </Border>
+        
+        <!--Variable Panel-->
         <Border HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="5,5,5,5" Grid.Row="2">
-            <StackPanel Orientation="Horizontal" Margin="0" Grid.Row="2">
-                <toolKit:ListBoxDragDropTarget AllowDrop="False">
-                    <ListBox x:Name="methodPalette" Height="200" Width="370" >
-                        <ListBox.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <StackPanel Orientation="Vertical"/>
-                            </ItemsPanelTemplate>
-                        </ListBox.ItemsPanel>
-                    </ListBox>
-                </toolKit:ListBoxDragDropTarget>
-            </StackPanel>
+            <Viewbox Grid.Row="2" Stretch="UniformToFill">
+                <StackPanel Orientation="Vertical" Margin="0" VerticalAlignment="Center">
+                    <Canvas Background="LightGray" Height="40" Width="313">
+                        <TextBlock Text="VARIABLES" Canvas.Left="5" Canvas.Top="10" FontSize="18" FontWeight="Bold"/>
+                        <Button x:Name="createVariableBtn" Canvas.Top="15" Canvas.Left="213" Foreground="White" FontWeight="Bold">
+                            <Button.Content>
+                                <TextBlock Text="CREATE" TextAlignment="Center" Width="55"/>
+                            </Button.Content>
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="Black" CornerRadius="2">
+                                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                        <Button x:Name="editVariableBtn" Canvas.Top="15" Canvas.Left="273" Foreground="White" FontWeight="Bold">
+                            <Button.Content>
+                                <TextBlock Text="EDIT" TextAlignment="Center" Width="35"/>
+                            </Button.Content>
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="Black" CornerRadius="2">
+                                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </Canvas>
+                    <toolKit:ListBoxDragDropTarget AllowDrop="False">
+                        <ListBox x:Name="variablePalette" Height="142" Width="313" >
+                            <ListBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Vertical"/>
+                                </ItemsPanelTemplate>
+                            </ListBox.ItemsPanel>
+                        </ListBox>
+                    </toolKit:ListBoxDragDropTarget>
+                </StackPanel>
+            </Viewbox>
         </Border>
+        
+        <!--Method Panel-->
         <Border HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="5,5,5,5" Grid.Row="3">
-            <StackPanel Orientation="Horizontal" Margin="0" Grid.Row="3">
-                <toolKit:ListBoxDragDropTarget AllowDrop="False">
-                    <ListBox x:Name="variablePalette" Height="200" Width="370" >
-                        <ListBox.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <StackPanel Orientation="Vertical"/>
-                            </ItemsPanelTemplate>
-                        </ListBox.ItemsPanel>
-                    </ListBox>
-                </toolKit:ListBoxDragDropTarget>
-            </StackPanel>
+            <Viewbox Grid.Row="3" Stretch="UniformToFill">
+                <StackPanel Orientation="Vertical" Margin="0" VerticalAlignment="Center">
+                    <Canvas Background="LightGray" Height="40" Width="313">
+                        <TextBlock Text="CUSTOM METHODS" Canvas.Left="5" Canvas.Top="10" FontSize="18" FontWeight="Bold"/>
+                        <Button x:Name="createMethodBtn" Canvas.Top="15" Canvas.Left="213" Foreground="White" FontWeight="Bold">
+                            <Button.Content>
+                                <TextBlock Text="CREATE" TextAlignment="Center" Width="55"/>
+                            </Button.Content>
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="Black" CornerRadius="2">
+                                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                        <Button x:Name="editMethodBtn" Canvas.Top="15" Canvas.Left="273" Foreground="White" FontWeight="Bold">
+                            <Button.Content>
+                                <TextBlock Text="EDIT" TextAlignment="Center" Width="35"/>
+                            </Button.Content>
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="Black" CornerRadius="2">
+                                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </Canvas>
+                    <toolKit:ListBoxDragDropTarget AllowDrop="False">
+                        <ListBox x:Name="methodPalette" Height="142" Width="313" >
+                            <ListBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Vertical"/>
+                                </ItemsPanelTemplate>
+                            </ListBox.ItemsPanel>
+                        </ListBox>
+                    </toolKit:ListBoxDragDropTarget>
+                </StackPanel>
+            </Viewbox>
         </Border>
+        
+        <!--Editor Panel-->
         <Border HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="5,5,5,5" 
                 Grid.Row="0" Grid.Column="1" Grid.RowSpan="4">
-            <StackPanel x:Name="editorPanel"  Orientation="Horizontal" Margin="0" Grid.Row="0" Grid.Column="1" Grid.RowSpan="4">
-                <toolKit:ListBoxDragDropTarget x:Name="editorDragDrop" AllowDrop="True">
-                    <ListBox x:Name="editorPalette" Height="830" Width="830">
-                        <ListBox.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <StackPanel Orientation="Vertical"/>
-                            </ItemsPanelTemplate>
-                        </ListBox.ItemsPanel>
-                    </ListBox>
-                </toolKit:ListBoxDragDropTarget>
-            </StackPanel>
+            <!--"<Viewbox Grid.Row="0" Grid.Column="1" Grid.RowSpan="4" Stretch="UniformToFill">-->
+                <StackPanel x:Name="editorPanel"  Orientation="Vertical" Margin="0">
+                    <sdk:TabControl x:Name="editorTabControl" Height="690" Width="720" Background="Black">
+                        <sdk:TabItem x:Name="editorMain" Header="MAIN" FontWeight="Bold" FontSize="18" Background="LightGray">
+                            <StackPanel>
+                                <custom:EditorDragDropTarget x:Name="editorDragDrop" AllowDrop="True">
+                                    <ListBox x:Name="editorPalette" Height="650" Width="710">
+                                        <ListBox.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <StackPanel Orientation="Vertical"/>
+                                            </ItemsPanelTemplate>
+                                        </ListBox.ItemsPanel>
+                                    </ListBox>
+                                </custom:EditorDragDropTarget>
+                            </StackPanel>
+                        </sdk:TabItem>
+                    </sdk:TabControl>
+                    <Canvas Width="720">
+                        
+                        <!--connect to robot button-->
+                        <Button x:Name="connectToRobotBtn" Canvas.Top="10" Canvas.Left="20" Foreground="Black" FontWeight="Bold" FontSize="14" 
+                            Height="50" Width="100">
+                            <Button.Content>
+                                <TextBlock Text="Connect to Robot" TextWrapping="Wrap" TextAlignment="Center"/>
+                            </Button.Content>
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="LightGray" CornerRadius="2">
+                                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                        <!--load program button-->
+                        <Button x:Name="loadProgramBtn" Canvas.Top="10" Canvas.Left="195" Foreground="Black" FontWeight="Bold" FontSize="14" 
+                            Height="50" Width="100">
+                            <Button.Content>
+                                <TextBlock Text="Load Program" TextWrapping="Wrap" TextAlignment="Center"/>
+                            </Button.Content>
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="Yellow" CornerRadius="2">
+                                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                        <!--run button-->
+                        <Button x:Name="runBtn" Canvas.Top="10" Canvas.Left="370" Foreground="Black" FontWeight="Bold" FontSize="14" 
+                            Height="50" Width="100">
+                            <Button.Content>
+                                <TextBlock Text="Run" TextWrapping="Wrap" TextAlignment="Center"/>
+                            </Button.Content>
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="LightGreen" CornerRadius="2">
+                                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                        <!--stop button-->
+                        <Button x:Name="stopBtn" Canvas.Top="10" Canvas.Left="545" Foreground="Black" FontWeight="Bold" FontSize="14" 
+                            Height="50" Width="100">
+                            <Button.Content>
+                                <TextBlock Text="STOP" TextWrapping="Wrap" TextAlignment="Center"/>
+                            </Button.Content>
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="Red" CornerRadius="2">
+                                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </Canvas>
+                </StackPanel>
+            <!--"</Viewbox>-->
         </Border>
+
+        <!--Trash Panel-->
+        <Border HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="5,5,5,5" Grid.Row="3" Grid.Column="2">
+            <Viewbox Grid.Row="3" Grid.Column="2" Stretch="UniformToFill">
+                <StackPanel x:Name="trashPanel" Orientation="Vertical" Margin="0" VerticalAlignment="Center">
+                    <Canvas Height="90" Width="313">
+                        <TextBlock x:Name="tblText" Canvas.Top="20" Canvas.Left="30" Text="Not clicked yet."></TextBlock>
+                        <Button x:Name="undoBtn" Canvas.Top="60" Canvas.Left="30" Foreground="White" FontWeight="Bold" Click="Handle_ButtonOnClick">
+                            <Button.Content>
+                                <TextBlock Text="UNDO" TextAlignment="Center" Width="40"/>
+                            </Button.Content>
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="Black" CornerRadius="2">
+                                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                        <Button x:Name="redoBtn" Canvas.Top="60" Canvas.Left="243" Foreground="White" FontWeight="Bold">
+                            <Button.Content>
+                                <TextBlock Text="REDO" TextAlignment="Center" Width="40"/>
+                            </Button.Content>
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="Black" CornerRadius="2">
+                                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </Canvas>
+                    <custom:TrashDragDropTarget x:Name="trashDrapDrop" AllowDrop="True" VerticalAlignment="Bottom">
+                        <ListBox x:Name="trash" Height="92" Width="80">
+                            <ListBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Vertical"/>
+                                </ItemsPanelTemplate>
+                            </ListBox.ItemsPanel>
+                        </ListBox>
+                    </custom:TrashDragDropTarget>
+                </StackPanel>
+            </Viewbox>
+        </Border>
+ 
+        
+        <!--Spare Panel-->
+        <Border HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="5,5,5,5" Grid.Row="0" Grid.Column="2">
+            <!--<Viewbox Grid.Row="0" Grid.Column="2" Stretch="UniformToFill"></Viewbox>
+            <toolKit:ListBoxDragDropTarget>
+            <ListBox x:Name="crap">
+                 
+                </ListBox>
+            </toolKit:ListBoxDragDropTarget>
+
+            <Viewbox Grid.Row="1" Stretch="UniformToFill">
+                <StackPanel Orientation="Vertical" Margin="0" VerticalAlignment="Center">
+                    <Canvas Background="LightGray" Height="40" Width="313" x:Name="tes">
+                        <TextBlock Text="TESTING GROUNDS" Canvas.Left="5" Canvas.Top="10" FontSize="18" FontWeight="Bold"/>
+                    </Canvas>
+                    <toolKit:ListBoxDragDropTarget AllowDrop="False">
+                        <ListBox x:Name="testZone" Height="142" Width="313">
+                            <ListBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Vertical"/>
+                                </ItemsPanelTemplate>
+                            </ListBox.ItemsPanel>
+                        </ListBox>
+                    </toolKit:ListBoxDragDropTarget>
+                </StackPanel>
+            </Viewbox>-->
+
+        </Border>
+        <!--<Border HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="5,5,5,5" Grid.Row="1" Grid.Column="2" Grid.RowSpan="2"/>
+        <Viewbox Grid.Row="1" Grid.Column="2" Grid.RowSpan="2" Stretch="UniformToFill"></Viewbox>-->
+
+        <!-- Info Panel-->
+        <Border HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="5,5,5,5" 
+    		Grid.Row="1" Grid.Column="2" Grid.RowSpan="2">
+            <sdk:TabControl x:Name="infoTabs" Margin="5">
+                <sdk:TabItem Header="if">
+                    <ListBox x:Name="infoTest">
+                        <TextBlock Text="test"></TextBlock>
+                    </ListBox>
+                </sdk:TabItem>
+                <sdk:TabItem Header="loops">
+                    <ListBox BorderThickness="0">
+                        <TextBlock Text="testing"></TextBlock>
+                    </ListBox>
+                </sdk:TabItem>
+            </sdk:TabControl>
+        </Border>
+        
     </Grid>
 </UserControl>
