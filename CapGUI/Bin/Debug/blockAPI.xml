@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BlockDefinitions>
+
+  <Package name="ASSIGNMENTS">
+    <Block>
+      <name>ASSIGNMENT</name>
+      <type>STATEMENT</type>
+      <contains>
+        <string>set</string>
+        <socket>VARIABLE</socket>
+        <string>=</string>
+        <socket>VARIABLE/METHOD/CONSTANT</socket>
+      </contains>
+      <properties>
+        <color>Salmon</color>
+        <socketsMustMatch>true</socketsMustMatch>
+      </properties>
+    </Block>
+  </Package>
+
+  <Package name="CONDITION">
+    <Block>
+      <name>COMPARISON</name>
+      <type>PLUGIN</type>
+      <contains>
+        <socket>VARIABLE/METHOD/CONSTANT</socket>
+        <string>is greater than</string>
+        <socket>VARIABLE/METHOD/CONSTANT</socket>
+      </contains>
+      <properties>
+        <color>ForestGreen</color>
+        <socketsMustMatch>true</socketsMustMatch>
+        <intDisabled>false</intDisabled>
+        <stringDisabled>true</stringDisabled>
+        <booleanDisabled>true</booleanDisabled>
+      </properties>
+    </Block>
+
+    <Block>
+      <name>INFINITY</name>
+      <type>PLUGIN</type>
+      <contains>
+        <string>infinity</string>
+      </contains>
+      <properties>
+        <color>ForestGreen</color>
+        <loopOnly>true</loopOnly>
+      </properties>
+    </Block>
+
+  </Package>
+</BlockDefinitions>
+
+
+
+<!--
+Notes:
+BlockDefinitions is the root of the tree. From there, we define packages, and blocks inside those packages.
+Blocks contain a name, type, contains element, and properties element. 
+  -Name is a string representing the block in the program.
+  -Type is either STATEMENT or PLUGIN, and determines broadly where it can be placed in the program.
+  -Contains holds the list of displayed elements of the block. E.g. in an if block, it'd have the prompt "If", followed by the sockets for a conditional.
+    -socket elements contain a string representing what is allowed in them (e.g. VARIABLE, or VARIABLE/METHOD/CONSTANT)
+  -Properties holds various data or true/false flags. This determines aspects like limiting its behavior, or refining where it can be placed, etc.
+    -Ideally properties should all be optional, except for maybe the block's display color. 
+
+-None of the example blocks I've made so far have listed a textbox element.
+  -sample:
+  <contains>
+    etc.
+    <textbox>STRING</textbox>
+    etc.
+  </contains>
+  -Internal string would determine what can be entered into it
+  
+-This should cover most, if not all, of the blocks listed in Garrett's block details file. Only things remaining would be to list out all possible properties.
+-Will blocks themselves handle their function (how does an 'if' know to behave?) and have that function be listed somewhere in this XML? 
+  -Probably question for much later
+
+Misc.
+-look and feel of blocks should communicate their function
+  -plugins and statements should look different in some way for ease of use
+
+-As an aside I love the 'end' block. Will make things much, much easier. 
+
+-->

@@ -4,5 +4,6 @@
     <AssemblyPart x:Name="System.Windows.Controls" Source="System.Windows.Controls.dll" />
     <AssemblyPart x:Name="System.Windows.Controls.Toolkit" Source="System.Windows.Controls.Toolkit.dll" />
     <AssemblyPart x:Name="System.Windows.Controls.Toolkit.Internals" Source="System.Windows.Controls.Toolkit.Internals.dll" />
+    <AssemblyPart x:Name="System.Xml.Linq" Source="System.Xml.Linq.dll" />
   </Deployment.Parts>
 </Deployment>

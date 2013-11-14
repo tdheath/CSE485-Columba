@@ -28,8 +28,20 @@ namespace CapGUI
         private String[] robotFunctions = { "SENSOR FUNCTIONS", "MOTOR FUNCTIONS" };
         private List<Block> programStructureList;
         private List<Block> robotFunctionsList;
+
+        //N
+        private ObservableCollection<Block> variableList;
+        private int varCt = -1;
+        private Block draggedVar = null;
+        private int draggedVarIndex = -1;
+        private bool varDrag = false;
         //private ObservableCollection<Block> editorList { get; set; } 
-        
+
+        //Color palette
+        Color varColor = Color.FromArgb(255, 255, 174, 201);
+        Color robotFunctionColor = Color.FromArgb(255, 255, 201, 14);
+        Color programStructureColor = Color.FromArgb(255, 153, 217, 234);
+
         public MainPage()
         {
             /*
@@ -63,28 +75,35 @@ namespace CapGUI
             //editorList = new ObservableCollection<Block>();
             programStructureList = new List<Block>();
             robotFunctionsList = new List<Block>();
+            variableList = new ObservableCollection<Block>();
+            //varDrag = false;
 
             for (int i = 0; i < programStructure.Length; i++)
             {
                 if(i < robotFunctions.Length)
-                    robotFunctionsList.Add(new Block(robotFunctions[i], Colors.Red));
-                programStructureList.Add(new Block(programStructure[i], Colors.Cyan));
+                    robotFunctionsList.Add(new Block(robotFunctions[i], robotFunctionColor));
+                programStructureList.Add(new Block(programStructure[i], programStructureColor));
                 //editorList.Add(new Block(programStructure[i], Colors.Cyan));
             }
+            variableList.Add(new Block("NewVar_0", varColor));
 
             //Set ItemsSource of ListBox to desired Lists
             //blockPalette.ItemsSource = editorList;
             blockPalette.ItemsSource = programStructureList;
             robotPalette.ItemsSource = robotFunctionsList;
-
+            variablePalette.ItemsSource = variableList;
+            varCt = 0;
             //Allow blocks to be placed in trash
             editorPalette.AddHandler(MouseLeftButtonDownEvent, new MouseButtonEventHandler(Handle_EditorMouseDown), true);
-
+            editorPalette.AddHandler(MouseLeftButtonUpEvent, new MouseButtonEventHandler(Handle_EditorMouseUp), true);
             //Disable dragging blocks to trash
             robotPalette.AddHandler(MouseLeftButtonDownEvent, new MouseButtonEventHandler(Handle_OtherMouseDown), true);
             blockPalette.AddHandler(MouseLeftButtonDownEvent, new MouseButtonEventHandler(Handle_OtherMouseDown), true);
             variablePalette.AddHandler(MouseLeftButtonDownEvent, new MouseButtonEventHandler(Handle_OtherMouseDown), true);
             methodPalette.AddHandler(MouseLeftButtonDownEvent, new MouseButtonEventHandler(Handle_OtherMouseDown), true);
+
+            //Variable panel
+            variablePalette.AddHandler(MouseLeftButtonDownEvent, new MouseButtonEventHandler(Handle_VarMouseDown), true);
 
 
             //trying to reprint row numbers
@@ -107,30 +126,45 @@ namespace CapGUI
             //END TEST/*/
         }
 
-        public void Handle_OtherMouseDown(object sender, MouseEventArgs args)
+        private void Handle_VarMouseDown(object sender, MouseButtonEventArgs e)
         {
-            trashDrapDrop.AllowAdd = false;
+            ListBox listBox = sender as ListBox;
+            draggedVar = (Block)listBox.SelectedItem;
+            draggedVarIndex = listBox.SelectedIndex;
+            varDrag = true;
         }
 
-        public void Handle_EditorMouseDown(object sender, MouseEventArgs args)
+        private void Handle_OtherMouseDown(object sender, MouseEventArgs args)
         {
+            trashDragDrop.AllowAdd = false;
+            varDrag = false;
+        }
+
+        private void Handle_EditorMouseDown(object sender, MouseEventArgs args)
+        {
+            trashDragDrop.AllowAdd = false;
             ListBox listBox = sender as ListBox;
             if (listBox.SelectedItem != null)
             {
-                trashDrapDrop.AllowAdd = true;
+                trashDragDrop.AllowAdd = true;
                 ((Block)listBox.SelectedItem).index = listBox.SelectedIndex;
             }
+            varDrag = false;
+        }
 
-            /*/////TEST AREA/////////
-            infoTest.Items.Add(editorPalette.Items.ElementAt(0));
-            TabItem x = new TabItem();
-            x.Header = "sandwich";
-            ListBox temp = new ListBox();
-            temp.Name = "temp";
-            x.Content = temp;
-            infoTabs.Items.Add(x);
-            temp.Items.Add(editorPalette.Items.ElementAt(0));
-            //////////END TEST/////*/
+        private void Handle_EditorMouseUp(object sender, MouseEventArgs args)
+        {
+            //ListBox listBox = sender as ListBox;
+            for (int i = 0; i < this.editorPalette.Items.Count; i++)
+            {
+                ((Block)this.editorPalette.Items[i]).index = (i);
+            }
+            if (varDrag)
+            {
+                variableList.Insert(draggedVarIndex, new Block(draggedVar.Text, varColor));
+            }
+            varDrag = false;
+            //Bind(this.editorPalette, DragDropList);
         }
 
         private void Handle_ButtonOnClick(object sender, EventArgs args)
@@ -148,18 +182,34 @@ namespace CapGUI
             else
                 this.tblText.Text = "There are no items!";
         }
-
-        public void Handle_EditorMouseUp(object sender, MouseEventArgs args)
+        
+        private void createVariableBtn_Click(object sender, RoutedEventArgs e)
         {
-            //ListBox listBox = sender as ListBox;
-            for (int i = 0; i < this.editorPalette.Items.Count; i++)
+            variableList.Add(new Block("NewVar_" + ++varCt, varColor));
+        }
+
+        private void editVariableBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (draggedVarIndex != -1 && draggedVar != null)
             {
-                ((Block)this.editorPalette.Items[i]).index = (i);
-                infoTest.Items.Add(editorPalette.Items.ElementAt(i));
+                Block selected = draggedVar;
+                for (int i = 0; i < editorPalette.Items.Count; i++)
+                {
+                    Block blk = (Block)editorPalette.Items.ElementAt(i);
+                    if (blk.Text.Equals(selected.Text))
+                    {
+                        blk.Text += '*';
+                        editorPalette.Items.Insert(i, blk);
+                        editorPalette.Items.RemoveAt(i + 1);
+                    }
+                }
+                selected.Text += '*';
+                variableList.RemoveAt(draggedVarIndex);
+                variableList.Insert(draggedVarIndex, draggedVar);
+
+                //variableList += variableList.CollectionChanged(new EventHandler(sender, e));
+
             }
-            
-            //Bind(this.editorPalette, DragDropList);
-            
         }
     }
 }

@@ -64,7 +64,7 @@ namespace CapGUI
                             
                             if (selection.Item.GetType().Equals(typeof(Block)))
                             {
-                                Block currentTestBlock = new Block(((Block)selection.Item).Tex, ((Block)selection.Item).blockColor);
+                                Block currentTestBlock = new Block(((Block)selection.Item).Text, ((Block)selection.Item).blockColor);
                                 currentTestBlock.index = index.Value;
                                 InsertItem(dropTarget, index.Value, currentTestBlock);
                                 for (int i = 0; i < index.Value; i++)
