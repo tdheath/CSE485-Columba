@@ -29,6 +29,10 @@ namespace CapGUI
         private List<Block> programStructureList;
         private List<Block> robotFunctionsList;
 
+        //All blocks + packages
+        private List<List<Block>> allBlockList;
+        private List<String> packageNameList;
+
         //N
         private ObservableCollection<Block> variableList;
         private int varCt = -1;
@@ -82,10 +86,11 @@ namespace CapGUI
             {
                 if(i < robotFunctions.Length)
                     robotFunctionsList.Add(new Block(robotFunctions[i], robotFunctionColor));
-                programStructureList.Add(new Block(programStructure[i], programStructureColor));
+                //programStructureList.Add(new Block(programStructure[i], programStructureColor));
                 //editorList.Add(new Block(programStructure[i], Colors.Cyan));
             }
             variableList.Add(new Block("NewVar_0", varColor));
+            readBlockAPI();
 
             //Set ItemsSource of ListBox to desired Lists
             //blockPalette.ItemsSource = editorList;
@@ -126,6 +131,31 @@ namespace CapGUI
             //END TEST/*/
         }
 
+
+        private bool readBlockAPI()
+        {
+            BlockAPIReader r = new BlockAPIReader();
+            allBlockList = r.readBlockDefinitions();
+
+            packageNameList = r.getPackageNames();
+
+            //Temporary-- parse every single block read in into one list
+            foreach (List<Block> l in allBlockList)
+            {
+                foreach (Block b in l)
+                {
+                    programStructureList.Add(b);
+                }
+            }
+
+            if (allBlockList != null)
+                return true;
+            else
+                return false;
+        }
+
+
+        //Here there be draggin' (handlers)
         private void Handle_VarMouseDown(object sender, MouseButtonEventArgs e)
         {
             ListBox listBox = sender as ListBox;

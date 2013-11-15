@@ -39,12 +39,10 @@ namespace CapGUI
         public List<List<Block>> readBlockDefinitions()
         {
             List<List<Block>> blockList = new List<List<Block>>();
-
             try
             {
                 //Get and create the XML document to read from
-                String path = Directory.GetCurrentDirectory() + "\\blockAPI.xml";
-                XDocument apiDoc = XDocument.Load(path);
+                XDocument apiDoc = XDocument.Load("blockAPI.xml");
 
                 //Get an enumerator for each package node
                 IEnumerable<XElement> fullAPI = apiDoc.Elements();
@@ -71,7 +69,7 @@ namespace CapGUI
 
                 }
             }
-            catch (IOException e)
+            catch (Exception e)
             {
                 Debug.WriteLine("File not found.");
                 Debug.WriteLine(e.StackTrace);
@@ -108,7 +106,14 @@ namespace CapGUI
                 switch (flag.Name.ToString())
                 {
                     case "color":
-                        //newBlock.color = flag.Value.ToString();
+                        string rgbString = flag.Value.ToString();
+                        string[] splitString = rgbString.Split(' ');
+                        byte red, green, blue;
+                        byte.TryParse(splitString[0], out red);
+                        byte.TryParse(splitString[1], out green);
+                        byte.TryParse(splitString[2], out blue);
+
+                        newBlock.blockColor = Color.FromArgb(255, red, green, blue);
                         break;
                     case "loopOnly":
                         if (Boolean.TryParse(flag.Value.ToString(), out flagValue))

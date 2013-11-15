@@ -12,7 +12,7 @@
         <socket>VARIABLE/METHOD/CONSTANT</socket>
       </contains>
       <properties>
-        <color>Salmon</color>
+        <color>153 217 234</color>
         <socketsMustMatch>true</socketsMustMatch>
       </properties>
     </Block>
@@ -28,7 +28,7 @@
         <socket>VARIABLE/METHOD/CONSTANT</socket>
       </contains>
       <properties>
-        <color>ForestGreen</color>
+        <color>153 217 234</color>
         <socketsMustMatch>true</socketsMustMatch>
         <intDisabled>false</intDisabled>
         <stringDisabled>true</stringDisabled>
@@ -43,7 +43,7 @@
         <string>infinity</string>
       </contains>
       <properties>
-        <color>ForestGreen</color>
+        <color>153 217 234</color>
         <loopOnly>true</loopOnly>
       </properties>
     </Block>

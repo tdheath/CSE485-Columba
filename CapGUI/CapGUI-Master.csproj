@@ -115,7 +115,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="blockAPI.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>
