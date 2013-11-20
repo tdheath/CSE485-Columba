@@ -23,6 +23,7 @@ namespace CapGUI
     {
         private List<Panel> colPanels = new List<Panel>();
 
+
         //private String[] whatDoesTheFoxSay = { "Woof", "Meow", "Tweet", "Squeak", "Moo", "Croak", "Toot", "Quack", "Blub", "Ow Ow Ow" };
         private String[] programStructure = { "CONDITION", "IF", "ELSE IF", "ELSE", "LOOP", "LOOP FOR", "WAIT", "WAIT FOR" };
         private String[] robotFunctions = { "SENSOR FUNCTIONS", "MOTOR FUNCTIONS" };
@@ -175,7 +176,7 @@ namespace CapGUI
             trashDragDrop.AllowAdd = false;
             ListBox listBox = sender as ListBox;
             if (listBox.SelectedItem != null)
-            {
+            {   
                 trashDragDrop.AllowAdd = true;
                 ((Block)listBox.SelectedItem).index = listBox.SelectedIndex;
             }
@@ -195,6 +196,7 @@ namespace CapGUI
             }
             varDrag = false;
             //Bind(this.editorPalette, DragDropList);
+            updateInfo();
         }
 
         private void Handle_ButtonOnClick(object sender, EventArgs args)
@@ -240,6 +242,44 @@ namespace CapGUI
                 //variableList += variableList.CollectionChanged(new EventHandler(sender, e));
 
             }
+        }
+
+        public void updateInfo()
+        {
+            infoTabs.Items.Clear();
+            for (int i = 0; i < editorPalette.Items.Count; i++)
+            {
+                
+                //infoTest.Items.Add("cookie");
+                Block y = new Block(((Block)editorPalette.Items.ElementAt(i)).Text, ((Block)editorPalette.Items.ElementAt(i)).blockColor);
+                if (y.Text.Equals("INFINITY"))
+                {
+                    if (((ListBox)((Block)editorPalette.Items.ElementAt(i)).innerDragDrop.Content) != null)
+                    {
+                        ((ListBox)(y.innerDragDrop.Content)).ItemsSource = ((ListBox)((Block)editorPalette.Items.ElementAt(i)).innerDragDrop.Content).ItemsSource;
+                    }
+                }
+                bool existingTab = false;
+                for (int j = 0; j < infoTabs.Items.Count; j++)
+                {
+                    TabItem z = (TabItem)infoTabs.Items.ElementAt(j);
+                    if (z.Header.Equals(y.Text))
+                    {
+                        ((ListBox)z.Content).Items.Add(y);
+                        existingTab = true;
+                    }
+                }
+                if (!existingTab)
+                {
+                    ListBox infoTest = new ListBox();
+                    infoTest.Items.Add(y);
+                    TabItem x = new TabItem();
+                    x.Header = y.Text;
+                    x.Content = infoTest;
+                    infoTabs.Items.Add(x);
+                }
+            }
+
         }
     }
 }

@@ -18,85 +18,124 @@ using System.ComponentModel;
 namespace CapGUI
 {
     public class EditorDragDropTarget : ListBoxDragDropTarget
-    {   
+    {
+
         protected override void OnDropOverride(Microsoft.Windows.DragEventArgs args)
         {
-            if ((args.AllowedEffects & Microsoft.Windows.DragDropEffects.Link) == Microsoft.Windows.DragDropEffects.Link
-                   || (args.AllowedEffects & Microsoft.Windows.DragDropEffects.Move) == Microsoft.Windows.DragDropEffects.Move)
-            {
-                //changed
-                //gets the data format which is a ItemDragEventArgs
-                object data = args.Data.GetData(args.Data.GetFormats()[0]);
 
-                //changed
-                //cast from generic object to ItemDragEventArgs and add to SelectionCollection
-                ItemDragEventArgs itemDragEventArgs = data as ItemDragEventArgs;
-                SelectionCollection selectionCollection = itemDragEventArgs.Data as SelectionCollection;
-
-                //changed
-                //get the target listbox from DragEventArgs
-                ListBox dropTarget = GetDropTarget(args);
-
-
-                if (dropTarget != null && selectionCollection.All(selection => CanAddItem(dropTarget, selection.Item)))
+                if ((args.AllowedEffects & Microsoft.Windows.DragDropEffects.Link) == Microsoft.Windows.DragDropEffects.Link
+                       || (args.AllowedEffects & Microsoft.Windows.DragDropEffects.Move) == Microsoft.Windows.DragDropEffects.Move)
                 {
-                    if ((args.Effects & Microsoft.Windows.DragDropEffects.Move) == Microsoft.Windows.DragDropEffects.Move)
+                    //changed
+                    //gets the data format which is a ItemDragEventArgs
+                    object data = args.Data.GetData(args.Data.GetFormats()[0]);
+
+                    //changed
+                    //cast from generic object to ItemDragEventArgs and add to SelectionCollection
+                    ItemDragEventArgs itemDragEventArgs = data as ItemDragEventArgs;
+                    SelectionCollection selectionCollection = itemDragEventArgs.Data as SelectionCollection;
+
+                    //changed
+                    //get the target listbox from DragEventArgs
+                    ListBox dropTarget = GetDropTarget(args);
+
+
+                    if (dropTarget != null && selectionCollection.All(selection => CanAddItem(dropTarget, selection.Item)))
                     {
-                        args.Effects = Microsoft.Windows.DragDropEffects.Move;
+                        if ((args.Effects & Microsoft.Windows.DragDropEffects.Move) == Microsoft.Windows.DragDropEffects.Move)
+                        {
+                            args.Effects = Microsoft.Windows.DragDropEffects.Move;
+                        }
+                        else
+                        {
+                            args.Effects = Microsoft.Windows.DragDropEffects.Link;
+                        }
+
+                        int? index = GetDropTargetInsertionIndex(dropTarget, args);
+
+                        if (index != null)
+                        {
+                            if (args.Effects == Microsoft.Windows.DragDropEffects.Move && itemDragEventArgs != null && !itemDragEventArgs.DataRemovedFromDragSource)
+                            {
+                                itemDragEventArgs.RemoveDataFromDragSource();
+                            }
+
+                            //major change place at top of the listbox to act as a stack for undo
+                            foreach (Selection selection in selectionCollection)
+                            {
+
+                                if (selection.Item.GetType().Equals(typeof(Block)))
+                                {
+                                    Block currentTestBlock = new Block(((Block)selection.Item).Text, ((Block)selection.Item).blockColor);
+
+                                    currentTestBlock.index = index.Value;
+
+
+                                    //Making sure code blocks stay intact
+                                    if (currentTestBlock.Text.Equals("INFINITY"))
+                                    {
+                                        if (((ListBox)((Block)selection.Item).innerDragDrop.Content) != null)
+                                        {
+                                            double x = (double)currentTestBlock.ActualHeight;
+                                            List<object> o = ((ListBox)((Block)selection.Item).innerDragDrop.Content).Items.ToList();
+                                            List<Block> t = new List<Block>();
+                                            foreach (object obj in o)
+                                            {
+                                                t.Add((Block)obj);
+                                                currentTestBlock.UpdateLayout();
+                                                currentTestBlock.Height += 25.00;
+                                                
+                                            }
+                                            ((ListBox)(currentTestBlock.innerDragDrop.Content)).ItemsSource = t;
+                                        }
+                                    }
+                                    if(dropTarget.Name.Equals("innerDragDropBox"))
+                                    {
+                                            EditorDragDropTarget listBoxParent = (EditorDragDropTarget)dropTarget.Parent;
+                                            StackPanel dragDropParent = (StackPanel)listBoxParent.Parent;
+                                            ((Canvas)dragDropParent.Parent).Height += 25;
+                                    }
+                                    if (dropTarget.Name.Equals("editorPalette") && currentTestBlock.Text.Equals("ASSIGNMENT"))
+                                    {
+
+                                    }
+                                    else
+                                    {
+                                        InsertItem(dropTarget, index.Value, currentTestBlock);
+                                    }
+
+
+                                    for (int i = 0; i < index.Value; i++)
+                                    {
+                                        ((Block)dropTarget.Items[i]).index = i;
+                                    }
+
+                                }
+
+
+                                /*var dropTargetList = dropTarget.Items.Cast<TestBlock>().ToList();
+                                int i = 0;
+                                foreach (TestBlock TestBlock in dropTargetList)
+                                {
+                                    Debug.WriteLine("Name: " + TestBlock.TestBlockName);
+                                    TestBlock.index = i++;
+                                    Debug.WriteLine("Index: " + TestBlock.index);
+                                }*/
+                            }
+                        }
                     }
                     else
                     {
-                        args.Effects = Microsoft.Windows.DragDropEffects.Link;
+                        args.Effects = Microsoft.Windows.DragDropEffects.None;
                     }
 
-                    int? index = GetDropTargetInsertionIndex(dropTarget, args);
-
-                    if (index != null)
+                    if (args.Effects != args.AllowedEffects)
                     {
-                        if (args.Effects == Microsoft.Windows.DragDropEffects.Move && itemDragEventArgs != null && !itemDragEventArgs.DataRemovedFromDragSource)
-                        {
-                            itemDragEventArgs.RemoveDataFromDragSource();
-                        }
-
-                        //major change place at top of the listbox to act as a stack for undo
-                        foreach (Selection selection in selectionCollection)
-                        {
-                            
-                            if (selection.Item.GetType().Equals(typeof(Block)))
-                            {
-                                Block currentTestBlock = new Block(((Block)selection.Item).Text, ((Block)selection.Item).blockColor);
-                                currentTestBlock.index = index.Value;
-                                InsertItem(dropTarget, index.Value, currentTestBlock);
-                                for (int i = 0; i < index.Value; i++)
-                                {
-                                    ((Block)dropTarget.Items[i]).index = i;
-                                }
-                                
-                            }
-                            
-
-                            /*var dropTargetList = dropTarget.Items.Cast<TestBlock>().ToList();
-                            int i = 0;
-                            foreach (TestBlock TestBlock in dropTargetList)
-                            {
-                                Debug.WriteLine("Name: " + TestBlock.TestBlockName);
-                                TestBlock.index = i++;
-                                Debug.WriteLine("Index: " + TestBlock.index);
-                            }*/
-                        }
+                        args.Handled = true;
                     }
-                }
-                else
-                {
-                    args.Effects = Microsoft.Windows.DragDropEffects.None;
-                }
-
-                if (args.Effects != args.AllowedEffects)
-                {
-                    args.Handled = true;
                 }
             }
-        }
+        
 
         /*protected override bool CanAddItem(ListBox itemsControl, object data)
         {

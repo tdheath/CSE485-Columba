@@ -16,6 +16,7 @@ namespace CapGUI
     {
         //Actual name of the block (IF-Block, While-Block, etc.)
         private string blockName;
+        public bool tempflag = false;
         public string Text { get { return blockName; } set { blockName = value; } }
         //Color the block is rendered in
         private Color privateColor;
@@ -57,6 +58,12 @@ namespace CapGUI
             blockColor = newBlockColor;
             LayoutRoot.Background = new SolidColorBrush(newBlockColor);
             fore.Text = Text;
+
+            if(newBlockName.Equals("INFINITY"))
+            {
+                createBrackets();               
+            }
+
 
             typeFieldList = new List<String>();
             dataList = new List<Object>();
@@ -129,6 +136,27 @@ namespace CapGUI
         public override string ToString()
         {
             return Text + " Index: " + index;
+        }
+
+        private void createBrackets()
+        {
+            LayoutRoot.Height = LayoutRoot.Height * 3;
+            ListBox temp = new ListBox();
+            Thickness y = new Thickness(50, 0, 0, 0);
+            temp.Margin = y;
+            temp.Background = new SolidColorBrush(blockColor);
+            y.Left = 0;
+            temp.BorderThickness = y;
+            temp.Width = LayoutRoot.Width - 50;
+            temp.MinHeight = 25;
+            temp.Name = "innerDragDropBox";
+            innerDragDrop.Content = temp;
+            TextBox x = new TextBox();
+            x.Text = "END";
+            x.Height = 25;
+            x.Background = new SolidColorBrush(blockColor);
+            x.BorderThickness = y;
+            innerPane.Children.Add(x);
         }
 
     }

@@ -500,7 +500,7 @@
         <Border HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="5,5,5,5" 
     		Grid.Row="1" Grid.Column="2" Grid.RowSpan="2">
             <sdk:TabControl x:Name="infoTabs" Margin="5">
-                <sdk:TabItem Header="if">
+                <!--<sdk:TabItem Header="if">
                     <ListBox x:Name="infoTest">
                         <TextBlock Text="test"></TextBlock>
                     </ListBox>
@@ -509,7 +509,7 @@
                     <ListBox BorderThickness="0">
                         <TextBlock Text="testing"></TextBlock>
                     </ListBox>
-                </sdk:TabItem>
+                </sdk:TabItem>-->
             </sdk:TabControl>
         </Border>
 

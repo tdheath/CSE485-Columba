@@ -3,10 +3,15 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolKit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Toolkit"
+    xmlns:custom="clr-namespace:CapGUI"
     mc:Ignorable="d"
     d:DesignHeight="300" d:DesignWidth="400">
 
     <Canvas x:Name="LayoutRoot" Height="25" Width="500" MinWidth="500" MinHeight="25">
-        <TextBlock x:Name="fore"></TextBlock>
+        <StackPanel x:Name="innerPane" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <TextBlock x:Name="fore" Height="25"></TextBlock>
+            <custom:EditorDragDropTarget x:Name="innerDragDrop" AllowDrop="True"/>          
+        </StackPanel>
     </Canvas>
 </UserControl>
