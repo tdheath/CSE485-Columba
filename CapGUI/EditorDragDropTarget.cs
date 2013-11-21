@@ -74,27 +74,17 @@ namespace CapGUI
                                     //Making sure code blocks stay intact
                                     if (currentTestBlock.Text.Equals("INFINITY"))
                                     {
-                                        if (((ListBox)((Block)selection.Item).innerDragDrop.Content) != null)
-                                        {
-                                            double x = (double)currentTestBlock.ActualHeight;
-                                            List<object> o = ((ListBox)((Block)selection.Item).innerDragDrop.Content).Items.ToList();
-                                            List<Block> t = new List<Block>();
-                                            foreach (object obj in o)
-                                            {
-                                                t.Add((Block)obj);
-                                                currentTestBlock.UpdateLayout();
-                                                currentTestBlock.Height += 25.00;
-                                                
-                                            }
-                                            ((ListBox)(currentTestBlock.innerDragDrop.Content)).ItemsSource = t;
-                                        }
+                                        currentTestBlock = bracketHandler(currentTestBlock, (Block)selection.Item);
                                     }
+                                    //adjusting a bracketed block's height when blocks are added to it
                                     if(dropTarget.Name.Equals("innerDragDropBox"))
                                     {
                                             EditorDragDropTarget listBoxParent = (EditorDragDropTarget)dropTarget.Parent;
                                             StackPanel dragDropParent = (StackPanel)listBoxParent.Parent;
                                             ((Canvas)dragDropParent.Parent).Height += 25;
                                     }
+
+                                    //restricting adding blocks to the editor pallete based on name
                                     if (dropTarget.Name.Equals("editorPalette") && currentTestBlock.Text.Equals("ASSIGNMENT"))
                                     {
 
@@ -161,5 +151,33 @@ namespace CapGUI
             }
             return collection is System.Collections.IList;
         }*/
+
+        private Block bracketHandler(Block newBlock, Block oldBlock)
+        {
+            if (((ListBox)oldBlock.innerDragDrop.Content) != null)
+            {
+                List<object> o = ((ListBox)(oldBlock).innerDragDrop.Content).Items.ToList();
+                List<Block> t = new List<Block>();
+                foreach (object obj in o)
+                {
+                    Block tempBlock = (Block)obj;
+                    if (tempBlock.Text.Equals("INFINITY"))
+                    {
+                        Block insideBlock = new Block(tempBlock.Text, tempBlock.blockColor);
+
+                        t.Add(bracketHandler(insideBlock,tempBlock));
+                    }
+                    else
+                    {
+                        t.Add(tempBlock);
+                    }
+
+                    newBlock.LayoutRoot.Height += tempBlock.LayoutRoot.Height;
+
+                }
+                ((ListBox)(newBlock.innerDragDrop.Content)).ItemsSource = t;               
+            }
+            return newBlock;
+        }
     }
 }

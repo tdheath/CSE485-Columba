@@ -256,7 +256,13 @@ namespace CapGUI
                 {
                     if (((ListBox)((Block)editorPalette.Items.ElementAt(i)).innerDragDrop.Content) != null)
                     {
-                        ((ListBox)(y.innerDragDrop.Content)).ItemsSource = ((ListBox)((Block)editorPalette.Items.ElementAt(i)).innerDragDrop.Content).ItemsSource;
+                       /* List<Block> newSource = new List<Block>();
+                        foreach(object obj in ((ListBox)((Block)editorPalette.Items.ElementAt(i)).innerDragDrop.Content).Items.ToList())
+                        {
+                            newSource.Add((Block)obj);
+                            y.LayoutRoot.Height += 25;
+                        }
+                        ((ListBox)(y.innerDragDrop.Content)).ItemsSource = newSource;*/
                     }
                 }
                 bool existingTab = false;
